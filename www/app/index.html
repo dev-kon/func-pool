@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EtherSocial Mining Pool</title>
+    <meta name="description" content="High profitability EtherSocial mining pool"/>
+    <meta name="keywords" content="ethersocial, pool, mining, cryptocurrency"/>
+    <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
+    {{content-for "head"}}
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/open-ethereum-pool.css">
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script>
+    var menuChoiceTimer;function menuChoiceTimerfc(){menuChoiceTimer=setTimeout(function(){if($("div.ember-view").length>0) menuChoiceClose();else menuChoiceTimerfc();},10);}menuChoiceTimerfc();function menuChoiceClose(){$(".navbar-nav").find("a").off().on({touchend:function(){var _this=$(this);$(".navbar-collapse.in").stop().animate({"height":"1px"},220, "swing", function(){$(".navbar-collapse").attr("aria-expanded", false).removeClass("in");});}});}
+    </script>
+    <script src="{{rootURL}}assets/open-ethereum-pool.js"></script>
+
+    {{content-for "body-footer"}}
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; CHANGEME in app/templates/index.html |
+          Powered by <a href="https://github.com/sammy007/open-ethereum-pool" target="_blank">open-ethereum-pool</a> |
+          <strong>Dev ETH/ETC:</strong>
+          <a href="https://etherscan.io/address/0xb85150eb365e7df0941f0cf08235f987ba91506a" rel="nofollow" target="_blank">
+            0xb85150eb365e7df0941f0cf08235f987ba91506a
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
